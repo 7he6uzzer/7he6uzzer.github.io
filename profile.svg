@@ -1,0 +1,153 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0e27"/>
+      <stop offset="50%" stop-color="#1a0b2e"/>
+      <stop offset="100%" stop-color="#16213e"/>
+    </linearGradient>
+    <linearGradient id="neon" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#00f0ff"/>
+      <stop offset="50%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#ff006e"/>
+    </linearGradient>
+    <linearGradient id="skin" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f4c9a0"/>
+      <stop offset="100%" stop-color="#d49a72"/>
+    </linearGradient>
+    <linearGradient id="hair" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a1a2e"/>
+      <stop offset="100%" stop-color="#0f0f1e"/>
+    </linearGradient>
+    <linearGradient id="jacket" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a1a2e"/>
+      <stop offset="100%" stop-color="#0a0a1a"/>
+    </linearGradient>
+    <radialGradient id="cyan-glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#00f0ff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="pink-glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#ff006e" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#ff006e" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#00f0ff" stroke-width="0.5" opacity="0.15"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="600" fill="url(#bg)"/>
+  <rect width="600" height="600" fill="url(#grid)"/>
+
+  <!-- Ambient glows -->
+  <circle cx="120" cy="120" r="180" fill="url(#cyan-glow)"/>
+  <circle cx="480" cy="480" r="200" fill="url(#pink-glow)"/>
+
+  <!-- Skyline silhouette -->
+  <g opacity="0.4">
+    <rect x="20" y="380" width="40" height="120" fill="#0f0f1e"/>
+    <rect x="65" y="340" width="35" height="160" fill="#0f0f1e"/>
+    <rect x="105" y="400" width="50" height="100" fill="#0f0f1e"/>
+    <rect x="160" y="320" width="30" height="180" fill="#0f0f1e"/>
+    <rect x="195" y="360" width="45" height="140" fill="#0f0f1e"/>
+    <rect x="410" y="350" width="40" height="150" fill="#0f0f1e"/>
+    <rect x="455" y="310" width="35" height="190" fill="#0f0f1e"/>
+    <rect x="495" y="380" width="45" height="120" fill="#0f0f1e"/>
+    <rect x="545" y="340" width="35" height="160" fill="#0f0f1e"/>
+  </g>
+  <!-- Window lights -->
+  <g fill="#00f0ff" opacity="0.7">
+    <rect x="30" y="400" width="3" height="3"/><rect x="40" y="420" width="3" height="3"/>
+    <rect x="75" y="360" width="3" height="3"/><rect x="85" y="380" width="3" height="3"/>
+    <rect x="170" y="340" width="3" height="3"/><rect x="180" y="370" width="3" height="3"/>
+    <rect x="465" y="330" width="3" height="3"/><rect x="475" y="360" width="3" height="3"/>
+  </g>
+  <g fill="#ff006e" opacity="0.7">
+    <rect x="115" y="420" width="3" height="3"/><rect x="135" y="440" width="3" height="3"/>
+    <rect x="210" y="380" width="3" height="3"/><rect x="225" y="410" width="3" height="3"/>
+    <rect x="510" y="400" width="3" height="3"/><rect x="555" y="380" width="3" height="3"/>
+  </g>
+
+  <!-- Character: Jacket/shoulders -->
+  <path d="M 130 600 L 140 460 Q 200 410 300 405 Q 400 410 460 460 L 470 600 Z" fill="url(#jacket)"/>
+  <!-- Jacket neon trim -->
+  <path d="M 140 460 Q 200 410 300 405 Q 400 410 460 460" fill="none" stroke="url(#neon)" stroke-width="3" filter="url(#glow)"/>
+  <line x1="300" y1="405" x2="300" y2="600" stroke="#00f0ff" stroke-width="2" opacity="0.6"/>
+
+  <!-- Neck -->
+  <path d="M 270 380 L 270 420 Q 300 430 330 420 L 330 380 Z" fill="url(#skin)"/>
+
+  <!-- Head -->
+  <ellipse cx="300" cy="290" rx="95" ry="115" fill="url(#skin)"/>
+
+  <!-- Hair -->
+  <path d="M 205 280 Q 200 170 300 160 Q 405 165 400 285 Q 395 220 360 200 Q 320 185 280 195 Q 230 210 215 260 Z" fill="url(#hair)"/>
+  <!-- Hair neon highlight -->
+  <path d="M 215 240 Q 250 190 310 180" fill="none" stroke="#a855f7" stroke-width="2.5" opacity="0.8" filter="url(#glow)"/>
+  <path d="M 320 175 Q 370 185 395 230" fill="none" stroke="#00f0ff" stroke-width="2.5" opacity="0.8" filter="url(#glow)"/>
+
+  <!-- Ears -->
+  <ellipse cx="208" cy="295" rx="12" ry="20" fill="url(#skin)"/>
+  <ellipse cx="392" cy="295" rx="12" ry="20" fill="url(#skin)"/>
+  <!-- Cyber ear implant -->
+  <rect x="395" y="285" width="8" height="20" rx="2" fill="#1a1a2e" stroke="#00f0ff" stroke-width="1"/>
+  <circle cx="399" cy="290" r="1.5" fill="#00f0ff" filter="url(#glow)"/>
+
+  <!-- Eyebrows -->
+  <path d="M 245 260 Q 265 252 285 260" fill="none" stroke="#0f0f1e" stroke-width="4" stroke-linecap="round"/>
+  <path d="M 315 260 Q 335 252 355 260" fill="none" stroke="#0f0f1e" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Cyberpunk visor / glasses -->
+  <rect x="225" y="275" width="150" height="28" rx="6" fill="#0a0a1a" stroke="url(#neon)" stroke-width="2" filter="url(#glow)"/>
+  <rect x="232" y="282" width="58" height="14" rx="2" fill="#00f0ff" opacity="0.85"/>
+  <rect x="310" y="282" width="58" height="14" rx="2" fill="#ff006e" opacity="0.85"/>
+  <!-- Visor reflection -->
+  <line x1="240" y1="285" x2="280" y2="285" stroke="#ffffff" stroke-width="1" opacity="0.6"/>
+  <line x1="318" y1="285" x2="358" y2="285" stroke="#ffffff" stroke-width="1" opacity="0.6"/>
+
+  <!-- Nose -->
+  <path d="M 295 310 Q 290 335 295 345 Q 300 350 305 345 Q 310 335 305 310" fill="none" stroke="#b87a5a" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Mouth - slight smirk -->
+  <path d="M 275 370 Q 300 380 325 368" fill="none" stroke="#8b3a4a" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Cheek tech tattoo -->
+  <g stroke="#00f0ff" stroke-width="1.2" fill="none" opacity="0.85" filter="url(#glow)">
+    <path d="M 360 320 L 375 325 L 380 340"/>
+    <circle cx="380" cy="340" r="2" fill="#00f0ff"/>
+    <path d="M 375 325 L 385 320"/>
+  </g>
+
+  <!-- Collar circuit -->
+  <g stroke="#a855f7" stroke-width="1.5" fill="none" opacity="0.9" filter="url(#glow)">
+    <path d="M 240 440 L 260 450 L 260 470"/>
+    <circle cx="260" cy="470" r="2" fill="#a855f7"/>
+    <path d="M 360 440 L 340 450 L 340 470"/>
+    <circle cx="340" cy="470" r="2" fill="#a855f7"/>
+  </g>
+
+  <!-- Floating particles -->
+  <g fill="#00f0ff" opacity="0.8">
+    <circle cx="80" cy="200" r="2"/>
+    <circle cx="520" cy="180" r="2.5"/>
+    <circle cx="50" cy="320" r="1.5"/>
+    <circle cx="555" cy="280" r="2"/>
+  </g>
+  <g fill="#ff006e" opacity="0.8">
+    <circle cx="100" cy="150" r="1.5"/>
+    <circle cx="540" cy="240" r="2"/>
+    <circle cx="60" cy="260" r="2"/>
+  </g>
+
+  <!-- Corner HUD brackets -->
+  <g stroke="#00f0ff" stroke-width="2" fill="none" opacity="0.7">
+    <path d="M 20 20 L 20 50 M 20 20 L 50 20"/>
+    <path d="M 580 20 L 580 50 M 580 20 L 550 20"/>
+    <path d="M 20 580 L 20 550 M 20 580 L 50 580"/>
+    <path d="M 580 580 L 580 550 M 580 580 L 550 580"/>
+  </g>
+</svg>
