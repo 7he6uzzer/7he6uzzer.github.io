@@ -29,7 +29,7 @@ const skillCategories = [
   {
     title: "Tools",
     icon: Wrench,
-    skills: ["SonarQube", "Burp Suite", "OWASP ZAP"],
+    skills: ["SonarQube", "Burp Suite", "OWASP ZAP", "Snyk", "Checkmarx", "Semgrep", "GitHub Advanced Security"],
   },
   {
     title: "Practices",

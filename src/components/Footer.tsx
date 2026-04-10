@@ -1,4 +1,4 @@
-import { Mail, Linkedin, Globe } from "lucide-react";
+import { Mail, Linkedin, Globe, Github } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -9,7 +9,7 @@ const Footer = () => {
             Hariprasad K A
           </div>
           <p className="mt-1 text-xs text-muted-foreground">
-            © {new Date().getFullYear()} — Senior AppSec & Supply-Chain Architect
+            © {new Date().getFullYear()} Hariprasad K A. Built with React & Tailwind.
           </p>
         </div>
         <div className="flex items-center gap-2">
@@ -28,6 +28,15 @@ const Footer = () => {
             aria-label="LinkedIn"
           >
             <Linkedin className="h-4 w-4" />
+          </a>
+          <a
+            href="https://github.com/7he6uzzer"
+            target="_blank"
+            rel="noreferrer"
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-background/60 text-muted-foreground transition-all hover:border-primary/40 hover:text-primary"
+            aria-label="GitHub"
+          >
+            <Github className="h-4 w-4" />
           </a>
           <a
             href="https://hilinecreators.com"

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, Phone, Linkedin, Globe, ArrowDown, ShieldCheck } from "lucide-react";
+import { Mail, Phone, Linkedin, Globe, Github, ArrowDown, ShieldCheck } from "lucide-react";
 import FadeUp from "@/animation/FadeUp";
 
 const HeroSection = () => {
@@ -41,7 +41,7 @@ const HeroSection = () => {
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-60" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
               </span>
-              Available for senior AppSec & Supply-Chain engagements
+              7he6uzzer
             </motion.div>
           </FadeUp>
 
@@ -107,6 +107,14 @@ const HeroSection = () => {
                 className="inline-flex items-center gap-2 transition-colors hover:text-primary"
               >
                 <Linkedin className="h-4 w-4" /> LinkedIn
+              </a>
+              <a
+                href="https://github.com/7he6uzzer"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 transition-colors hover:text-primary"
+              >
+                <Github className="h-4 w-4" /> GitHub
               </a>
               <a
                 href="https://hilinecreators.com"
