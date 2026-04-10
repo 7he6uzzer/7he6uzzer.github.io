@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0ea5e9"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="32" height="32" rx="7" fill="#0a0f1a"/>
+  <!-- Border accent -->
+  <rect width="32" height="32" rx="7" fill="none" stroke="url(#g)" stroke-width="1.2" opacity="0.6"/>
+  <!-- HKA monogram -->
+  <text
+    x="16"
+    y="21"
+    font-family="'Sora', 'Inter', system-ui, sans-serif"
+    font-size="11"
+    font-weight="700"
+    fill="url(#g)"
+    text-anchor="middle"
+    letter-spacing="0.5"
+  >HKA</text>
+</svg>
